@@ -1,0 +1,29 @@
+{
+  "experiment": {
+    "name": "horizon_pc/buck_N35",
+    "benchmark": "buck",
+    "N": 35,
+    "limit": 600.0,
+    "screen_limit": 60.0,
+    "repeats": 3,
+    "configs": [
+      "PC-DPLG-N",
+      "PC-DPLG-N-AF-AT"
+    ],
+    "instances": "results/horizon/buck_N35"
+  },
+  "started": "2026-10-05T18:34:01+00:00",
+  "finished": "2026-10-05T18:35:48+00:00",
+  "environment": {
+    "git_commit": "7a517c3ba314cc5a1fc74578ed50ffb1e792d1e0",
+    "git_dirty": true,
+    "python": "3.14.8",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "gurobipy": "13.0.3",
+    "gurobi": "13.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 14
+  }
+}

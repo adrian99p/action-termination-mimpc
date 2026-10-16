@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]  
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "action-termination-mimpc"
+version = "0.1.0"
+description = "Action-based termination of branch-and-bound for mixed-integer MPC"
+readme = "README.md"
+authors = [
+    { name = "Adrian L. Pavlak", email = "adrian.l.pavlak@ntnu.no" },
+    { name = "John-Morten Godhavn" },
+    { name = "Lars S. Imsland" },
+]
+requires-python = ">=3.12"  # The paper used 3.14.8.
+dependencies = ["gurobipy>=13", "matplotlib", "numpy", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/adrian99p/action-termination-mimpc"

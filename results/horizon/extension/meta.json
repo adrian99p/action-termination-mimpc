@@ -1,0 +1,27 @@
+{
+  "experiment": {
+    "name": "horizon/extension",
+    "limit": 600.0,
+    "warmup_limit": 5.0,
+    "screen_limit": 60.0,
+    "repeats": 1,
+    "configs": [
+      "MF-DPLG-N",
+      "MF-DPLG-N-AF-AT"
+    ]
+  },
+  "started": "2026-10-05T15:47:21+00:00",
+  "finished": "2026-10-05T17:19:45+00:00",
+  "environment": {
+    "git_commit": "4de9d0a35b0a74b2c00f59cd31080842645e57f5",
+    "git_dirty": true,
+    "python": "3.14.8",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "gurobipy": "13.0.3",
+    "gurobi": "13.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 14
+  }
+}

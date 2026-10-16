@@ -1,0 +1,59 @@
+{
+  "experiment": {
+    "name": "closed_loop_benchmarks",
+    "benchmarks": {
+      "buck": {
+        "N": 30
+      },
+      "refrigeration": {
+        "N": 20
+      }
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "steps": 30,
+    "time_limit": 60.0,
+    "strategy": {
+      "name": "MF-DPLG-N",
+      "branching": "MF",
+      "selection": "DPLG",
+      "child_order": "nearest",
+      "rho": 0.25,
+      "action_first": false,
+      "first_stage": false,
+      "action_termination": false,
+      "eps": 0.0,
+      "int_tol": 1e-06,
+      "bound_tol": 1e-08,
+      "time_limit": 60.0,
+      "node_limit": null,
+      "trace": false
+    },
+    "controllers": [
+      "Gurobi",
+      "B&B",
+      "AF+AT"
+    ],
+    "timing": "one solve per instant, no repeats"
+  },
+  "started": "2026-10-05T17:39:15+00:00",
+  "finished": "2026-10-05T18:00:23+00:00",
+  "environment": {
+    "git_commit": "ab3cbfb02b43a5e13c775e71bedb83a929e6b60f",
+    "git_dirty": false,
+    "python": "3.14.8",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "gurobipy": "13.0.3",
+    "gurobi": "13.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 14
+  },
+  "note": "Refrigeration was stopped during seed 0 after 28 min (2026-10-05): near steady state the B&B searches and action-fixed solves approach their 60 s limits, which exceeded the revision's time budget. Only the five buck loops are saved."
+}

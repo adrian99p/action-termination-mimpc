@@ -1,0 +1,71 @@
+{
+  "experiment": {
+    "name": "action_traces",
+    "config": {
+      "name": "PC-DPLG-N-AF",
+      "branching": "PC",
+      "selection": "DPLG",
+      "child_order": "nearest",
+      "rho": 0.25,
+      "action_first": true,
+      "action_termination": false,
+      "eps": 0.0,
+      "int_tol": 1e-06,
+      "bound_tol": 1e-08,
+      "time_limit": null,
+      "node_limit": null,
+      "trace": true
+    },
+    "benchmarks": {
+      "diagnostic": {
+        "N": 16
+      },
+      "integrator": {
+        "N": 20
+      },
+      "buck": {
+        "N": 30
+      },
+      "refrigeration": {
+        "N": 20
+      }
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "selection": "median certification share"
+  },
+  "started": "2026-10-04T13:51:18+00:00",
+  "finished": "2026-10-04T13:52:03+00:00",
+  "environment": {
+    "git_commit": "382483dac9d1adaa313ccd5feb576041cb1af018",
+    "git_dirty": false,
+    "python": "3.14.8",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "gurobipy": "13.0.3",
+    "gurobi": "13.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 14
+  }
+}

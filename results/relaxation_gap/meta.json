@@ -1,0 +1,33 @@
+{
+  "experiment": {
+    "name": "relaxation_gap",
+    "benchmarks": {
+      "diagnostic": {
+        "N": 16
+      },
+      "integrator": {
+        "N": 20
+      },
+      "buck": {
+        "N": 30
+      },
+      "refrigeration": {
+        "N": 20
+      }
+    }
+  },
+  "started": "2026-10-05T06:41:49+00:00",
+  "finished": "2026-10-05T06:42:05+00:00",
+  "environment": {
+    "git_commit": "6837556e734efd56fbfe92fb59a99817845c6866",
+    "git_dirty": false,
+    "python": "3.14.8",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "gurobipy": "13.0.3",
+    "gurobi": "13.0.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 14
+  }
+}
