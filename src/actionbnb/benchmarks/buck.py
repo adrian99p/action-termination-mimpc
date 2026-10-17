@@ -1,4 +1,4 @@
-"""Synchronous step-down (buck) dc-dc converter with direct switching, adapted from Geyer et al.
+"""Synchronous step-down (buck) DC-DC converter with direct switching, adapted from Geyer et al.
 
 The primary switch S1 is closed (u = 1) or open (u = 0), and the synchronous
 switch S2 is operated dually, so the converter stays in continuous conduction

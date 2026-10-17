@@ -61,37 +61,25 @@ From the repository root:
 
 ```bash
 python -m reproduce.reproduce --assets-only  # seconds: outputs from the committed results
-python -m reproduce.reproduce --smoke        # fewer seeds, for a quick check of the whole pipeline
+python -m reproduce.reproduce --smoke        # fewer seeds, for a quick check
 python -m reproduce.reproduce                # about 9 h: the paper's full runs
 ```
 
-With the environment of `requirements.txt` and Python 3.14, `--assets-only`
-regenerates byte-identical files, so a clean `git status` confirms that every
-output follows from the committed data. Other Python versions compress the PDF
-figures differently but give the same content. Each script in
-`experiments/` can also be run on its own, first `run` and then `assets`, e.g.
-`python -m experiments.action_study run`:
+`--assets-only` generates the figures and tables from the committed results,
+and the full run recomputes them. `--smoke` runs the whole pipeline with fewer
+seeds for a faster test. The figures and Table I are then saved in
+[reproduce/results/](reproduce/results/):
 
-| Script | Result | Full run |
-| --- | --- | --- |
-| `action_study.py` | Table I and the numbers quoted with it | ≈ 1 h |
-| `action_traces.py` | Fig. 2 | ≈ 1 min |
-| `closed_loop.py` | Fig. 4 | ≈ 7 min |
-| `closed_loop_benchmarks.py` | Buck converter closed loops | ≈ 20 min |
-| `horizon.py` | Fig. 3 (`run`, then `extend` to 600 s) | ≈ 5.5 h + ≈ 1.5 h |
-| `horizon_pc.py` | Pseudocost curve in Fig. 3 | ≈ 45 min |
-| `relaxation_gap.py` | Relaxation separation in the closed loop | < 1 min |
-
-The figures are in `results/action_traces/`, `results/horizon/`, and
-`results/closed_loop/` (PDF and PNG), and Table I is in
-[results/action_study/action_study_table.md](results/action_study/action_study_table.md).
+| File | Result |
+| --- | --- |
+| `fig2_bound_traces.png` | Fig. 2 |
+| `fig3_horizon_scaling.png` | Fig. 3 |
+| `fig4_closed_loop.png` | Fig. 4 |
+| `table1_ablation.md` | Table I |
 
 A rerun with the same Gurobi version should give the same node counts and first
 inputs. Runtimes depend on the machine (the paper used one thread of an Intel
-Core Ultra 7 165U), so compare speedups rather than absolute times. Every
-`meta.json` records the git commit, package versions, and machine of its run.
-The commits refer to the private development repository, see
-[results/README.md](results/README.md).
+Core Ultra 7 165U), so compare speedups rather than absolute times.
 
 ## Repository layout
 
@@ -103,7 +91,7 @@ The commits refer to the private development repository, see
 | `src/actionbnb/mpc/` | Closed-loop simulation |
 | `experiments/` | One script per result |
 | `results/` | Raw results and the figures, tables, and numbers computed from them |
-| `reproduce/` | `reproduce.py`, which runs every experiment in order |
+| `reproduce/` | `reproduce.py`, which runs every experiment in order, and `results/` with the paper's figures and Table I |
 
 ## Contact
 

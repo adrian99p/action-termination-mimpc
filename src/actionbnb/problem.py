@@ -46,5 +46,3 @@ class MIQPProblem:
     def n_binary(self) -> int:
         """Number of binary variables."""
         return self.binary_idx.size
-
-    

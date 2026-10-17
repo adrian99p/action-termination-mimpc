@@ -20,9 +20,9 @@ def zero_order_hold(A_c: np.ndarray, B_c: np.ndarray, dt: float) -> tuple[np.nda
 class Benchmark(ABC):
     """An MI-MPC benchmark: a nominal linear plant and its horizon MIQP.
 
-    The seed fixes the instance data, such as the initial state or a reference
-    phase. A closed loop starts from x = initial_state() and u_prev =
-    initial_input(), and at each sampling instant k = 0, 1, ...
+    The seed fixes the instance data, such as the initial state. A closed
+    loop starts from x = initial_state() and u_prev = initial_input(), and at
+    each sampling instant k = 0, 1, ...
 
         problem = benchmark.problem(x, k, u_prev)
         u = problem.action_encoding.action(z)    # z solves problem
