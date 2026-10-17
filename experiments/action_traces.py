@@ -144,7 +144,7 @@ def trace_figure(records: list[dict], path: Path) -> None:
     ]
     fig.legend(handles=handles, loc="upper center", ncol=4, bbox_to_anchor=(0.5, 1.0), handlelength=2.0,
                columnspacing=1.6)
-    fig.tight_layout(w_pad=1.5, rect=(0, 0, 1, 0.88))
+    fig.tight_layout(w_pad=1.5, rect=(0, 0, 1, 0.93))
 
     save_figure(fig, path)
 

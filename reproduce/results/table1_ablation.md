@@ -1,4 +1,4 @@
-SGM runtime [ms] over 20 instances using DPLG-N. Bold: fastest variant. Speedup: B&B over AF+AT. Cert.: AF+AT nodes as a percentage of AF nodes.
+SGM runtime [ms] over 20 instances using DPLG-N. Bold: fastest variant. Speedup: B&B over AF+AT. Cert.: SGM nodes of AF+AT as a percentage of AF.
 
 | Problem | Rule | B&B | AT | AF | AF+AT | Gurobi | Speedup | Cert. [%] |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |

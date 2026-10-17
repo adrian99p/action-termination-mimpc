@@ -118,7 +118,7 @@ def markdown_table(rows: list[tuple], instances: int) -> str:
     """Table I for viewing on GitHub, with the paper's caption."""
     lines = [
         f"SGM runtime [ms] over {instances} instances using DPLG-N. Bold: fastest variant. "
-        "Speedup: B&B over AF+AT. Cert.: AF+AT nodes as a percentage of AF nodes.",
+        "Speedup: B&B over AF+AT. Cert.: SGM nodes of AF+AT as a percentage of AF.",
         "",
         "| Problem | Rule | B&B | AT | AF | AF+AT | Gurobi | Speedup | Cert. [%] |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
